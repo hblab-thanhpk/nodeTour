@@ -4,9 +4,8 @@ const dev = {
     },
     db: {
         host: process.env.MONGO_HOST,
-        user: process.env.MONGO_USER,
-        pass: process.env.MONGO_PASS,
-        dbName: process.env.MONGO_DBNAME
+        port: process.env.MONGO_PORT,
+        name: process.env.MONGO_DBNAME
     }
 }
 

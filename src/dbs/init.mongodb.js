@@ -1,9 +1,8 @@
 'use strict'
 
 const mongoose = require('mongoose');
-const {db: {host, user, pass, dbName}} = require('../configs/init_config_app')
-console.log(host, user, pass, dbName)
-const connectStr = `mongodb+srv://${user}:${pass}@${host}/${dbName}?retryWrites=true&w=majority&appName=Cluster0`
+const {db: {host, name, port}} = require('../configs/init_config_app')
+const connectStr = `mongodb://${host}:${port}/${name}`
 
 class Database {
 

@@ -9,19 +9,17 @@ const app = express()
 app.use(morgan('combined'))
 app.use(helmet())
 app.use(compression())
+app.use(express.json())
+app.use(express.urlencoded(
+    extended: true
+))
 
 // init db
 require('./dbs/init.mongodb')
 
 
 // init routes
-app.get('/', (req, res, next) => {
-    const strTest = 'Hello Worlds'
-    return res.status(200).json({
-        message: 'Here',
-        metaData: strTest.repeat(100000)
-    })
-})
+app.use('/', require('./routes'))
 
 // handle Errors
 
