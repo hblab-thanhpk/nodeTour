@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-tour",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "expresss": "^0.0.0"
+  },
+  "devDependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.7.0",
+    "morgan": "^1.10.0"
+  }
+}
